@@ -1,8 +1,8 @@
-import { API_BASE_URL } from "../config";
+import { environment } from "../environments/environment";
 
 export const fetchHello = async () => {
   try {
-    const response = await fetch(`${API_BASE_URL}/api/hello`);
+    const response = await fetch(`${environment.apiBaseUrl}/api/hello`);
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
