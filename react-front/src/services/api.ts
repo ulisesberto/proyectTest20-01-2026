@@ -1,6 +1,8 @@
+import { API_BASE_URL } from "../config";
+
 export const fetchHello = async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/hello");
+    const response = await fetch(`${API_BASE_URL}/api/hello`);
     if (!response.ok) {
       throw new Error(`Error: ${response.status}`);
     }
